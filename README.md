@@ -44,7 +44,7 @@ The project focuses on creating a clean user experience while practicing core fr
 
 ---
 
-## Real-Time Search Functionality
+# Real-Time Search Functionality
 
 Users can instantly search students by typing their names.
 
@@ -76,7 +76,7 @@ The project also includes:
 - Dynamic star rating for top-performing students
 - "Data Not Found" message handling
 
-## JavaScript Concepts Practiced
+# JavaScript Concepts Practiced
 
 This project is especially useful for beginners learning JavaScript array methods and DOM manipulation.
 
@@ -114,7 +114,7 @@ Methods Used
 No frameworks or libraries were used in this project.
 
 
-## How to Run the Project
+# How to Run the Project
 
 # Step 1: Download the Project
 
