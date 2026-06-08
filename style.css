@@ -54,11 +54,16 @@ header {
   align-items: center;
 }
 
+.navBar form{
+  display: flex;
+  gap: 10px;
+}
 .navBar form input {
-  width: 200px;
+  width: 100%;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: none;
+  font-size: 16px;
 }
 
 .login .btn {
