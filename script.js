@@ -4,9 +4,6 @@ const great = document.getElementById("great");
 const boxes = document.querySelectorAll('.box');
 const heroSection = document.querySelector('.heroSection');
 
-great.addEventListener('click',()=>{
-  userNameDisplay.textContent = `, ${userName.value}`;
-})
 
 const heroSectionBoxes = document.querySelector('.heroSectionBoxes');
 
@@ -15,11 +12,22 @@ heroSectionBoxes.addEventListener('click', (e)=>{
   boxes.forEach((box)=>{
     if(box.textContent == targetValue){
       box.style.background = box.textContent;
-
-      // Extra functionlity.
-      // heroSection.style.background = box.textContent;
     }
   })
 
 })
 
+
+great.addEventListener('click', showName);
+userName.addEventListener("keypress", buttonClick)
+
+
+function showName(){
+  userNameDisplay.textContent = `, ${userName.value}`
+}
+
+function buttonClick(event){
+  if(event.key === "Enter"){
+    showName()
+  }
+}

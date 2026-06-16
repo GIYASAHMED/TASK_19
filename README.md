@@ -10,6 +10,7 @@ The main goal of this project is to improve understanding of:
 
 - DOM Manipulation
 - On click functionality.
+- On keypress functionality.
 
 The project focuses on creating a clean user experience while practicing core frontend development concepts without using any external frameworks or libraries.
 
@@ -27,6 +28,7 @@ Users can instantly enter their name and submit then show the name in UI.
 The project uses:
 
 - onClick method ✅
+- onkeypress method ✅
 - inputValue ✅
 - TextContent ✅
 - style change using JS ✅
