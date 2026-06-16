@@ -1,4 +1,4 @@
-# Student Card Search & Filter System — Project Task No. 18
+# DOM Manupulation — Project Task No. 18
 
 <img src="./images/demo.png" alt="Project demo">
 
