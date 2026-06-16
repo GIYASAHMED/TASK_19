@@ -27,7 +27,10 @@ function showName(){
 }
 
 function buttonClick(event){
+  console.log(event)
   if(event.key === "Enter"){
     showName()
   }
+
+  
 }
