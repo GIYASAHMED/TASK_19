@@ -111,9 +111,10 @@ function nextService() {
 
 function renderAddToCart() {
   tableBody.innerHTML = "";
+  let slNo = 1 ;
   cartServices.map((cart) => {
     tableBody.innerHTML += `<tr>
-                        <td>${cart.id}</td>
+                        <td>${slNo++}</td>
                         <td>${cart.serviceName}</td>
                         <td>₹${cart.amount}</td>
                       </tr>`;
