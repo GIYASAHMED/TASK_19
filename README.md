@@ -1,16 +1,23 @@
-# DOM Manupulation — Project Task No. 18
+# Service booking web app — Task No. 19
 
 <img src="./images/demo.png" alt="Project demo">
 
 ## Project Overview
 
-This project is a modern and responsive DOM manupulation project using pure HTML, CSS, and JavaScript. The application dynamically displays the input user name, and on box click color will change.
+This project is a modern and responsive Service booking web app built using pure HTML, CSS, and JavaScript. The application dynamically displays when user add items services are display in added items part (cart). also user can skip services. If user try to book without add services to the cart display a notification below book now section.
 
 The main goal of this project is to improve understanding of:
 
 - DOM Manipulation
-- On click functionality.
-- On keypress functionality.
+- Array Methods in JavaScript
+- Click event
+- Reuseable functions
+- Show current service
+- Show total amount using Reduce method
+- Dynamic UI Rendering using Map method
+- Add to cart service
+- Responsive Layout Design
+- Modern Frontend UI Development
 
 The project focuses on creating a clean user experience while practicing core frontend development concepts without using any external frameworks or libraries.
 
@@ -18,25 +25,46 @@ The project focuses on creating a clean user experience while practicing core fr
 
 # Project Features
 
-- DOM manupulation
+- Responsive Navigation Bar
+- Fully responsive web app
+- Works smoothly on desktop, tablet, and mobile devices
 
-
-# Real-Time show username Functionality
-
-Users can instantly enter their name and submit then show the name in UI.
-
-The project uses:
-
-- onClick method ✅
-- onkeypress method ✅
-- inputValue ✅
-- TextContent ✅
-- style change using JS ✅
+---
 
 
 # JavaScript Concepts Practiced
 
 This project is especially useful for beginners learning JavaScript array methods and DOM manipulation.
+
+Methods Used
+
+# map()
+
+- Used to dynamically generate all selected services.
+
+# reduce()
+
+- Calculate the total amount of Cart services.
+
+# addEventListener()
+
+- Used for handling user interactions.
+
+# innerHTML
+
+- Used for dynamically rendering UI content.
+
+# textContent
+
+- Used for dynamically rendering UI content.
+
+# Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+
+No frameworks or libraries were used in this project.
 
 
 # How to Run the Project
@@ -67,7 +95,7 @@ Learning Outcomes
 
 ✅ How dynamic rendering works in JavaScript
 ✅ How to manipulate the DOM
-✅ How array (using foreach) methods work in real-world projects
+✅ How array methods work in real-world projects
 ✅ How responsive UI layouts are built
 
 
@@ -76,9 +104,11 @@ Learning Outcomes
 Possible future enhancements include:
 
 - Backend database integration
+- Duplicate services
 - Local storage support
 - Framework version using React.js
-
+- Dark mode support
+- Pagination system
 
 # Author
 

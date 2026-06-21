@@ -3,30 +3,153 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS DOM MANUPULATION</title>
+    <title>Service Booking web app</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Remix Icon CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <div class="container">
-        <nav class="navBar">
-          <p>Hello <span class="user"> </span></p>
+        <nav>
+          <h3>Laundry</h3>
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+
+          <div class="menuIcon">
+            <img src="./images/menu.png" alt="">
+          </div>
+
+          <div class="userName">
+            <span>Username</span>
+            <i class="ri-logout-box-r-line"></i>
+          </div>
         </nav>
       </div>
     </header>
     <main>
-      <section>
+      <section id="hero">
         <div class="container">
-          <div class="heroSection">
-            <div class="heroSectionBoxes">
-              <div class="box">Red</div>
-              <div class="box">Blue</div>
-              <div class="box">Green</div>
-              <div class="box">Yellow</div>
+          <div class="hero-content">
+            <div class="leftSide">
+              <div class="firstPart">
+                <h3>Added Items</h3>
+
+                <div class="cartItemsList">
+                  <!-- Cart items show here start -->
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Sl No</th>
+                        <th>Service Name</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+
+                    <tbody id="tableBody"> 
+                      <!-- <tr>
+                        <td>1</td>
+                        <td>Website Design</td>
+                        <td>₹5000</td>
+                      </tr> -->
+                      
+                    </tbody>
+                  </table>
+                  <!-- Cart items show here end -->
+
+                  <div class="warning">
+                    <i class="ri-error-warning-line"></i>
+                    <h4>No Items added</h4>
+                    <p>Add items to the cart from the services bar</p>
+                  </div>
+                </div>
+                <div class="total"">
+                  <h4>Total Amount</h4>
+                  <p>₹ <span class="totalVlue">0</span></p>
+                </div>
+              </div>
+              <div class="secondPart">
+                <h3>Book Now</h3>
+                <form action="">
+                  <div>
+                    <label for="fullname">Fullname</label>
+                    <input
+                      type="text"
+                      placeholder="Fullname"
+                      id="fullname"
+                      name="fullname"
+                      required
+                      value=""
+                    />
+                  </div>
+                  <div class="emailandphone">
+                    <div>
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        placeholder="Email"
+                        id="email"
+                        name="email"
+                        required
+                        value=""
+                      />
+                    </div>
+                    <div>
+                      <label for="phone">Phone</label>
+                      <input
+                        type="text"
+                        placeholder="phone"
+                        id="phone"
+                        name="phone"
+                        required
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <button id="bookNowBtn">Book Now</button>
+                  <span class="bookingMsg hide">Add items to the cart before booking</span>
+                </form>
+              </div>
             </div>
-            <div class="userName">
-              <input type="text" id="userName" placeholder="Enter your name" value="">
-              <button class="btn" id="great">Greet</button>
+
+            <div class="rightSide">
+              <h3>Browse our services</h3>
+              <p>
+                Click on the add to cart button to add the services to your cart
+                or press skip
+              </p>
+              <div class="servicesImgPart">
+
+                <!-- Browsing part by Js start -->
+                <!-- <div class="serviceImg">
+                  <img
+                    src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                  />
+                  <div class="serviceContent">
+                    <h4>Dry Cleaning</h4>
+                    <h4>$200</h4>
+                  </div>
+                </div> -->
+                <!-- Browsing part by Js end -->
+
+                
+              </div>
+              <div class="cartButtons">
+                  <button id="skipBtn">Skip Item <i class="ri-indeterminate-circle-line"></i></button>
+                  <button id="addBtn">Add Item <i class="ri-add-circle-line"></i></button>
+                </div>
+             
+              <hr>
+
+               <p class="cartMsg"><i class="ri-error-warning-line"></i> Add the items to the cart and book now</p>
             </div>
           </div>
         </div>
