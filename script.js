@@ -110,14 +110,26 @@ function nextService() {
 }
 
 function renderAddToCart() {
-  tableBody.innerHTML = "";
-  let slNo = 1 ;
-  cartServices.map((cart) => {
-    tableBody.innerHTML += `<tr>
-                        <td>${slNo++}</td>
+  tableBody.innerHTML = cartServices
+    .map((cart, index) => {
+      return `<tr>
+                        <td>${index + 1}</td>
                         <td>${cart.serviceName}</td>
                         <td>₹${cart.amount}</td>
+                        <td class="remove" data-id="${cart.id}">x</td>
                       </tr>`;
+    })
+    .join("");
+
+  const remove = document.querySelectorAll(".remove");
+
+  remove.forEach((r) => {
+    r.addEventListener("click", (e) => {
+      let targetId = e.target.dataset.id;
+      console.log(targetId);
+
+      removeItem(targetId);
+    });
   });
 
   bookingMsg.classList.add("hide");
@@ -128,6 +140,13 @@ function renderAddToCart() {
   }, 0);
 
   totalVlue.textContent = TotalAmount;
+}
+
+function removeItem(id) {
+  cartServices = cartServices.filter((cart) => {
+    return cart.id != id;
+  });
+  renderAddToCart();
 }
 
 addBtn.addEventListener("click", () => {
@@ -150,7 +169,7 @@ bookNowBtn.addEventListener("click", (e) => {
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
   console.log(fname, email, phone);
-  msg2()
+  msg2();
 });
 
 function msg2() {
@@ -158,8 +177,10 @@ function msg2() {
     bookingMsg.classList.remove("hide");
     bookNowBtn.style.background = "red";
   }
-
 }
+
+
+
 
 // ⚠️   Readme text
 
