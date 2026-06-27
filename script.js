@@ -162,23 +162,34 @@ addBtn.addEventListener("click", () => {
 });
 
 // Form handling
+const fname = document.getElementById("fullname");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
 
 bookNowBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  const fname = document.getElementById("fullname").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  console.log(fname, email, phone);
-  msg2();
-});
+  const fname1 = fname.value.trim();
+  const email1 = email.value.trim();
+  const phone1 = phone.value.trim();
 
-function msg2() {
+  console.log(fname1,email1,phone1)
+
   if (cartServices.length == 0) {
     bookingMsg.classList.remove("hide");
     bookNowBtn.style.background = "red";
+    return;
   }
-}
-
+  if (fname === "" || email === "" || phone === "") {
+    alert("Please fill all fields")
+    return;
+  }
+  
+  alert("booking successfull!")
+  fname.value = "";
+   email.value = "" ;
+    phone.value ="";
+  
+});
 
 
 
